@@ -558,6 +558,7 @@
     <Content Include="game.vcxproj.filters" />
     <Content Include="game.vcxproj.user" />
     <Content Include="sprites\checkpoint.png" />
+    <Content Include="sprites\game-icon.ico" />
     <Content Include="sprites\game-over-background.png" />
     <Content Include="sprites\player.png" />
     <Content Include="sprites\success-background.png" />
