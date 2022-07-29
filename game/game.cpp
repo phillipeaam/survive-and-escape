@@ -193,7 +193,7 @@ void set_textures()
 	SetWindowIcon(icon);
 }
 
-int main()
+int WinMain()
 {
 	InitWindow(screen_width, screen_height, "Survive & Escape");
 
@@ -220,4 +220,6 @@ int main()
     	
         EndDrawing();
     }
+
+	return 0;
 }

@@ -78,7 +78,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -106,7 +106,7 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -550,6 +550,7 @@
     <ClInclude Include="message.h" />
     <ClInclude Include="message_manager.h" />
     <ClInclude Include="movable.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="restartable.h" />
     <ClInclude Include="texturable.h" />
     <ClInclude Include="trap.h" />
@@ -564,6 +565,13 @@
     <Content Include="sprites\success-background.png" />
     <Content Include="sprites\trap.png" />
     <Content Include="sprites\gameplay-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
+    <Image Include="sprites\game-icon.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
