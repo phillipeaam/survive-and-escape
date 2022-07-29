@@ -62,7 +62,7 @@ void message_manager::set_tries_message()
 {
 	const auto msg = tries_custom_text.c_str();
 	constexpr auto font_size = 30;
-	const auto pos_x = screen_width / 2 - 80;
+	const auto pos_x = screen_width / 2 - 60;
 	const auto pos_y = screen_height / 2 + font_size;
 
 	tries_message.config( msg, pos_x, pos_y, font_size, BLUE );
