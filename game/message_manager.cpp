@@ -10,6 +10,7 @@ message_manager::message_manager(const int screen_width, const int screen_height
 	set_tries_label();
 	set_tries_amount_label();
 	set_success_message();
+	set_tries_message();
 	set_game_over_message();
 	set_restart_option_message();	
 }
@@ -28,7 +29,7 @@ void message_manager::increase_tries_counter()
 
 void message_manager::set_tries_label()
 {
-	const auto msg = "Tries:";
+	const auto msg = tries_base_text.c_str();
 	constexpr auto font_size = 20;
 	constexpr auto pos_y = 10;
 	constexpr auto pos_x = 10;
@@ -52,9 +53,19 @@ void message_manager::set_success_message()
 	constexpr auto font_size = 40;
 	constexpr auto line_space = font_size / 3;
 	const auto pos_x = screen_width / 2 - 280;
-	const auto pos_y = screen_height / 2 - font_size - line_space;
+	const auto pos_y = screen_height / 3 - font_size - line_space;
 
 	success_message.config( msg, pos_x, pos_y, font_size, DARKGREEN );
+}
+
+void message_manager::set_tries_message()
+{
+	const auto msg = tries_custom_text.c_str();
+	constexpr auto font_size = 30;
+	const auto pos_x = screen_width / 2 - 80;
+	const auto pos_y = screen_height / 2 + font_size;
+
+	tries_message.config( msg, pos_x, pos_y, font_size, BLUE );
 }
 
 void message_manager::set_game_over_message()
@@ -83,12 +94,20 @@ void message_manager::update_tries_amount_message()
 	tries_amount = std::to_string(tries_counter);
 	const auto message = tries_amount.c_str();
 	tries_amount_label.update_message(message);
+	
+	tries_custom_text = tries_base_text;
+	tries_custom_text.append(tries_amount);
+}
+
+void message_manager::display_tries_counter() const
+{
+	tries_label.draw();
+	tries_amount_label.draw();
 }
 
 void message_manager::display_tries() const
 {
-	tries_label.draw();
-	tries_amount_label.draw();
+	tries_message.draw();
 }
 
 void message_manager::display_success() const

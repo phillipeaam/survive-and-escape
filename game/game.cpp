@@ -106,7 +106,7 @@ void draw_gameplay_elements()
 {	
 	draw_background(gameplay_background_texture);
 	
-	messages_ref.display_tries();
+	messages_ref.display_tries_counter();
 	
 	player_ref.draw();
 	for (auto& trap_ref : traps) trap_ref.draw();
@@ -155,6 +155,7 @@ void manage_success()
 	{
 		draw_background(success_background_texture);
 		messages_ref.display_success();
+		messages_ref.display_tries();
 	});
 }
 
