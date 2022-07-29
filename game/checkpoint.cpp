@@ -8,11 +8,6 @@ checkpoint::checkpoint(const int screen_width, const int screen_height)
 	x_left_edge = x_position + x_offset;
 }
 
-void checkpoint::set_texture(const Texture2D texture)
-{
-	tex = texture;
-}
-
 bool checkpoint::has_collision(const player& user_ref) const
 {
 	return x_left_edge <= user_ref.x_right_edge;

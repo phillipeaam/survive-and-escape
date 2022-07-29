@@ -455,6 +455,7 @@
 				
 			</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="texturable.cpp" />
     <ClCompile Include="trap.cpp">
       <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -550,6 +551,7 @@
     <ClInclude Include="message_manager.h" />
     <ClInclude Include="movable.h" />
     <ClInclude Include="restartable.h" />
+    <ClInclude Include="texturable.h" />
     <ClInclude Include="trap.h" />
   </ItemGroup>
   <ItemGroup>

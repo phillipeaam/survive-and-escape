@@ -1,9 +1,8 @@
 ﻿#pragma once
 #include "player.h"
 
-class checkpoint : displayable
+class checkpoint : public texturable, displayable
 {
-	Texture2D tex{ };
 	const int width{ 64 };
 	const int height{ 64 };
 	const int x_offset{ 6 };
@@ -12,7 +11,6 @@ class checkpoint : displayable
 	int x_left_edge{ 0 };
 public:
 	checkpoint(int screen_width, int screen_height);
-	void set_texture(Texture2D texture);
 	bool has_collision(const player& user_ref) const;
 	void draw() const override;
 };

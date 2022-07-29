@@ -11,11 +11,6 @@ player::player(const int pos_x, const int pos_y, const int screen_width)
 	x_pos_max = screen_width;
 }
 
-void player::set_texture(const Texture2D texture)
-{
-	tex = texture;
-}
-
 void player::update_edges()
 {
 	x_left_edge = x_position;

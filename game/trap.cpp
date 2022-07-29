@@ -13,11 +13,6 @@ trap::trap(const int pos_x, const int pos_y, const int y_step, const int screen_
 	y_pos_max = screen_height;
 }
 
-void trap::set_texture(const Texture2D texture)
-{
-	tex = texture;
-}
-
 void trap::update_edges()
 {
 	x_left_edge = x_position;
