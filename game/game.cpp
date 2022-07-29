@@ -188,6 +188,9 @@ void set_textures()
 
 	const Texture2D checkpoint_texture = LoadTexture("sprites/checkpoint.png");
 	checkpoint_ref.set_texture(checkpoint_texture);
+	
+	const Image icon = LoadImageFromTexture(player_texture); 
+	SetWindowIcon(icon);
 }
 
 int main()
