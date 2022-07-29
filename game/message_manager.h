@@ -8,7 +8,7 @@ class message_manager
 	int screen_height{ 0 };
 	int tries_counter{ 0 };
 	std::string tries_base_text{ "Fails: " };
-	std::string tries_custom_text{ tries_base_text };
+	std::string tries_custom_text{ "Fails: 0" };
 	std::string tries_amount{ "0" };
 	message success_message{};
 	message tries_message{};
